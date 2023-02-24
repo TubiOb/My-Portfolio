@@ -809,15 +809,74 @@ hr {
     .nav {
         margin: 0 auto;
     }
+    .Home {
+        width: 80%;
+        margin: auto;
+    }
     .skills-container {
         justify-content: center;
     }
-    .home-img {
-        width: 60%;
+    .projects__content {
+        width: 400px;
+        overflow: hidden;
+        margin: auto;
     }
 }
 
 @media (min-width: 768px) {
+    .Home {
+        width: 80%;
+        margin: auto;
+        flex-direction: row;
+        margin-top: calc(var(--header-height) + 4.5rem);
+        justify-content: center;
+        align-items: center;
+    }
+    .home-img {
+        width: 30%;
+        height: 40%;
+        overflow: hidden;
+    }
+    .home-text {
+        width: 40%;
+        height: 60%;
+        overflow: hidden;
+    }
+    .home-text h3 {
+        font-size: var(--h2-font-size);
+    }
+    .home-text h1 {
+        font-size: var(--medium-font);
+    }
+    .home-text h2 {
+        font-size: var(--h1-font-size);
+    }
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 2rem;
+        margin-top: 1rem;
+    }
+    .projects__content {
+        width: 500px;
+        margin-top: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        /* grid-template-columns: repeat(3, 250px); */
+        justify-content: center;
+        gap: 2rem 3rem;
+    }
+    .contact__container {
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+        column-gap: 8rem;
+        margin-top: 2rem;
+    }
+    .contact__form {
+        width: 360px;
+    }
+}
+
+@media(min-width:1023px) {
     .header {
         top: 0;
         bottom: initial;
@@ -865,88 +924,66 @@ hr {
     .section {
         padding-block: 8rem 0;
     }
-    .Home {
-        width: 90%;
-        margin: auto;
-        flex-direction: row;
-        margin-top: calc(var(--header-height) + 4.5rem);
-        justify-content: center;
-        align-items: center;
-    }
-    .home-img {
-        width: 30%;
-        height: 40%;
-        overflow: hidden;
-    }
-    .home-text {
-        width: 40%;
-        height: 60%;
-        overflow: hidden;
-    }
-    .home-text h3 {
-        font-size: var(--h2-font-size);
-    }
-    .home-text h1 {
-        font-size: var(--medium-font);
-    }
-    .home-text h2 {
-        font-size: var(--h1-font-size);
-    }
-    .skills-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        gap: 2rem;
-        margin-top: 1rem;
-    }
-    .projects__content {
-        margin-top: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-        grid-template-columns: repeat(3, 250px);
-        justify-content: center;
-        gap: 2rem 3rem;
-    }
-    .contact__container {
-        grid-template-columns: repeat(2, max-content);
-        justify-content: center;
-        column-gap: 8rem;
-        margin-top: 2rem;
-    }
-    .contact__form {
-        width: 360px;
-    }
     .scrollup {
         right: 3rem;
     }
     .show-scroll {
         bottom: 5rem;
     }
-    header {
+    .bg-header {
         box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
     }
-    .dark-theme header {
+    .dark-theme .bg-header {
         box-shadow: 0 6px 24px hsla(207, 24%, 8%, .6);
+    }
+}
+
+@media(min-width:1048px) {
+    .container {
+        margin-inline: auto;
+    }
+}
+
+@media(min-width: 1200px) {
+    .home-img {
+        width: 300px;
+    }
+    .projects__content {
+        width: 900px;
+    }
+    .projects__img {
+        width: 320px;
+        margin-bottom: 2rem;
+    }
+    .contact__title {
+        margin-bottom: 3rem;
+    }
+    .contact__title i {
+        font-size: 1.25rem;
+    }
+    .contact__info {
+        row-gap: 3rem;
+    }
+    .contact__data-info {
+        font-size: var(--p-font);
+    }
+    .contact__form {
+        row-gap: 2.5rem;
     }
     .footer__container {
         padding: 4rem 0 3rem;
-        justify-content: center;
-        align-items: center;
-        transition: background .4s;
     }
     .footer__list {
-        margin: 3rem 0;
         column-gap: 3rem;
-        transition: background .4s;
+        margin: 3rem 0;
     }
     .footer__social {
         column-gap: 2rem;
-        transition: background .4s;
     }
     .footer__social-link {
         font-size: 1.5rem;
     }
     .footer__copy {
         margin-top: 5rem;
-        transition: background .4s;
     }
 }

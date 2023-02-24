@@ -99,9 +99,35 @@ const scrollActive = () => {
 }
 window.addEventListener('scroll', scrollActive)
 
+
 // SHOW SCROLL UP
 const scrollUp = () => {
     const scrollUp = document.querySelector('#scroll-up');
     this.scrollY >= 350 ? scrollUp.classList.add('show-scroll') : scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
+
+// CHANGE BACKGROUND HEADER
+const scrollHeader = () => {
+    const header = document.getElementById('header')
+    this.scrollY >= 50 ? header.classList.add('bg-header') : header.classList.remove('bg-header')
+}
+
+window.addEventListener('scroll', scrollHeader)
+
+
+// SCROLL REVEAL ANIMATION
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 1500,
+    delay: 200,
+    reset: true
+})
+
+sr.reveal(`.Home, .projects__content, .footer__container`)
+sr.reveal(`.Home div`, { delay: 200, origin: 'bottom', interval: 50 })
+sr.reveal(`.About div, .Skills div`, { delay: 50, origin: 'bottom', interval: 20 })
+sr.reveal(`.about-me :nth-child(1), .skills-container:nth-child(1), .contact__content:nth-child(1)`, { origin: 'left' })
+sr.reveal(`.about-me :nth-child(2), .skills-container:nth-child(2), .contact__content:nth-child(2)`, { origin: 'right' })
