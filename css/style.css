@@ -1097,7 +1097,7 @@ hr {
     .home-text p,
     .details p,
     .iono {
-        font-size: var(--h2-font-size);
+        font-size: var(--h3-font-size);
     }
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
