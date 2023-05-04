@@ -21,6 +21,7 @@
     --title-color: hsl(207, 4%, 16%);
     --text-color: #000;
     --text-color-light: hsl(207, 4%, 56%);
+    --light-text-color: #7c899a;
     --hover: hsl(260, 100%, 51%);
     --big-font: 3.2rem;
     --medium-font: 1.8rem;
@@ -30,6 +31,9 @@
     --p-font: 0.941rem;
     --header-height: 3.5rem;
     --smaller-font-size: .75rem;
+    --font-medium: 15px;
+    --font-small: 13px;
+    --font-smaller: 11px;
     --card-color: #eaf4f4;
     --hue: 207;
     --sat: 90%;
@@ -78,6 +82,11 @@ img {
 .container {
     max-width: 1024px;
     margin-inline: 1.5rem;
+}
+
+.flexitem {
+    display: flex;
+    align-items: center;
 }
 
 
@@ -334,6 +343,86 @@ h2 span {
 
 .info-box:hover p {
     color: #fff;
+}
+
+.showcase {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 2px solid var(--light-light-text-color); */
+    position: relative;
+}
+
+.tab-box .tab_btn {
+    font-size: var(--font-medium);
+    font-weight: 500;
+    color: var(--title-color);
+    background: none;
+    border: none;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.tab-box .tab_btn.active {
+    color: var(--light-text-color);
+}
+
+.content_box {
+    width: 100%;
+    height: auto;
+    /* padding: 5px; */
+}
+
+.skill {
+    width: 100px;
+    height: auto;
+    border: 1px solid #7c899a;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    font-size: var(--font-small);
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.html {
+    color: rgba(234, 113, 46, 1);
+}
+
+.css {
+    color: rgba(17, 127, 237, 1);
+}
+
+.javascript {
+    color: rgba(238, 176, 33, 1);
+}
+
+.bootstrap {
+    color: rgba(234, 25, 227, 1);
+}
+
+.figma {
+    /* color: linear-gradient(135deg, #2BC3FF, #0072C6); */
+    background: linear-gradient(to bottom right, #FF7262, #FFD45F, #4CD7D0, #1ABC9C);
+    border: none;
+    outline: none;
+}
+
+.skill i {
+    font-size: var(--big-font);
 }
 
 .btn {

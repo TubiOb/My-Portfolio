@@ -15,8 +15,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/b68be37945.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
     <title>TubiOb | Portfolio</title>
 </head>
 
@@ -116,37 +117,89 @@
 
     <section class="Skills" id="Skills">
         <div class="heading">
-            <h2>Skills</h2>
-            <span>Professional Skills</span>
+            <h2>Skills and Projects</h2>
+            <!-- <span>Professional Skills</span> -->
         </div>
-
-        <div class="skills-container">
-            <div class="bars">
-                <div class="bars-box">
-                    <h3><i class='bx bxl-html5'></i> HTML</h3>
-                    <span>94%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar html-bar"></div>
-                </div>
-
-                <div class="bars-box">
-                    <h3><i class='bx bxl-css3'></i> CSS</h3>
-                    <span>80%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar css-bar"></div>
-                </div>
-
-                <div class="bars-box">
-                    <h3><i class='bx bxl-javascript'></i> Javascript</h3>
-                    <span>54%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar js-bar"></div>
-                </div>
+        <div class="showcase flexitem">
+            <div class="tab-box">
+                <button class="tab_btn active" data-tab="skills">Professional Skills</button>
+                <button class="tab_btn" data-tab="projects">Projects</button>
             </div>
 
-            <div class="content">
-                <p>With my expertise in HTML, CSS, Javascript, I have successfully designed and developed several websites for both individual and group projects. My skills in these programming languages have allowed me to create intuitive and visually appealing
-                    websites that not only meet but exceed client expectations.</p>
+
+
+            <div class="content_box">
+                <div class="content active" data-tab="skills">
+                    <div class="skillsContainer">
+                        <div class="skill">
+                            <i class="ri-html5-line html" fill="rgba(234,113,46,1)"></i>
+                            <p>HTML5</p>
+                        </div>
+                        <div class="skill">
+                            <i class="ri-css3-line css" fill="rgba(17,127,237,1)"></i>
+                            <p>CSS3</p>
+                        </div>
+                        <div class="skill">
+                            <i class="bx bxl-javascript javascript" fill="rgba(238,176,33,1)"></i>
+                            <p>JAVASCRIPT</p>
+                        </div>
+                        <div class="skill">
+                            <i class="bx bxl-bootstrap bootstrap" fill="rgba(234,25,227,1)"></i>
+                            <p>BOOTSTRAP</p>
+                        </div>
+                        <div class="skill">
+                            <i class='bx bxl-figma figma' style='color:#fdfbf6'></i>
+                            <p>FIGMA</p>
+                        </div>
+                    </div>
+                    <span class="title"></span>
+                </div>
+
+
+
+
+                <div class="content" data-tab="projects">
+                    <div class="mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide item">
+                                <img src="" alt="">
+                                <div class="hoverable">
+
+                                </div>
+                                <span class="title"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="skills-container">
+                    <div class="bars">
+                        <div class="bars-box">
+                            <h3><i class='bx bxl-html5'></i> HTML</h3>
+                            <span>94%</span>
+                            <div class="light-bar"></div>
+                            <div class="percent-bar html-bar"></div>
+                        </div>
+
+                        <div class="bars-box">
+                            <h3><i class='bx bxl-css3'></i> CSS</h3>
+                            <span>80%</span>
+                            <div class="light-bar"></div>
+                            <div class="percent-bar css-bar"></div>
+                        </div>
+
+                        <div class="bars-box">
+                            <h3><i class='bx bxl-javascript'></i> Javascript</h3>
+                            <span>54%</span>
+                            <div class="light-bar"></div>
+                            <div class="percent-bar js-bar"></div>
+                        </div>
+                    </div> -->
+
+                <div class="content">
+                    <p>With my expertise in HTML, CSS, Javascript, I have successfully designed and developed several websites for both individual and group projects. My skills in these programming languages have allowed me to create intuitive and visually
+                        appealing websites that not only meet but exceed client expectations.</p>
+                </div>
             </div>
         </div>
     </section>
