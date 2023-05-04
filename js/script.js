@@ -118,16 +118,40 @@ window.addEventListener('scroll', scrollHeader)
 
 
 // SCROLL REVEAL ANIMATION
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 1500,
-    delay: 200,
-    reset: true
-})
+// const sr = ScrollReveal({
+//     origin: 'top',
+//     distance: '60px',
+//     duration: 1500,
+//     delay: 200,
+//     reset: true
+// })
 
-sr.reveal(`.Home, .projects__content, .footer__container`)
-sr.reveal(`.Home div`, { delay: 200, origin: 'bottom', interval: 50 })
-sr.reveal(`.About div, .Skills div`, { delay: 50, origin: 'bottom', interval: 20 })
-sr.reveal(`.about-me :nth-child(1), .skills-container:nth-child(1), .contact__content:nth-child(1)`, { origin: 'left' })
-sr.reveal(`.about-me :nth-child(2), .skills-container:nth-child(2), .contact__content:nth-child(2)`, { origin: 'right' })
+// sr.reveal(`.Home, .projects__content, .footer__container`)
+// sr.reveal(`.Home div`, { delay: 200, origin: 'bottom', interval: 50 })
+// sr.reveal(`.About div, .Skills div`, { delay: 50, origin: 'bottom', interval: 20 })
+// sr.reveal(`.about-me :nth-child(1), .skills-container:nth-child(1), .contact__content:nth-child(1)`, { origin: 'left' })
+// sr.reveal(`.about-me :nth-child(2), .skills-container:nth-child(2), .contact__content:nth-child(2)`, { origin: 'right' })
+
+
+// SHUFFLING BETWEEN SKILLS AND PROJECTS
+const tabs = document.querySelectorAll('.tab_btn'),
+    all_content = document.querySelectorAll('.content');
+
+
+tabs.forEach((tab, index) => {
+    tab.addEventListener('click', (e) => {
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+        tab.classList.add('active');
+
+        var line = document.querySelector('.line');
+        line.style.width = e.target.offsetWidth + "px";
+        line.style.left = e.target.offsetLeft + "px";
+
+        all_content.forEach(content => {
+            content.classList.remove('active');
+        })
+        all_content[index].classList.add('active');
+    });
+});

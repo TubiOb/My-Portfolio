@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Lato:wght@300&family=Niconne&family=Poppins:wght@300;400;500;600&family=Satisfy&family=Share+Tech+Mono&family=Ubuntu:wght@300&family=Yanone+Kaffeesatz:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Lato:wght@300&family=Lora:wght@400;500;600&family=Niconne&family=Poppins:wght@300;400;500;600&family=Satisfy&family=Share+Tech+Mono&family=Ubuntu:wght@300&family=Yanone+Kaffeesatz:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Rubik:wght@300;400;500;600&display=swap');
 
 /* UNIVERSAL */
 
@@ -228,6 +229,10 @@ section {
     color: var(--title-color);
 }
 
+.heading h2 {
+    font-size: var(--h2-font-size);
+}
+
 
 /* HOME */
 
@@ -273,15 +278,21 @@ section {
 }
 
 .home-text h3 {
-    font-size: var(--h3-font-size);
+    font-size: var(--p-font);
 }
 
 .home-text h1 {
-    font-size: var(--h1-font-size);
+    font-size: var(--h2-font-size);
 }
 
 .home-text h2 {
-    font-size: var(--h2-font-size);
+    font-size: var(--h3-font-size);
+}
+
+.home-text p,
+.details p,
+.iono {
+    font-size: var(--font-small);
 }
 
 
@@ -364,7 +375,7 @@ h2 span {
 }
 
 .tab-box .tab_btn {
-    font-size: var(--font-medium);
+    font-size: var(--font-small);
     font-weight: 500;
     color: var(--title-color);
     background: none;
@@ -377,10 +388,126 @@ h2 span {
     color: var(--light-text-color);
 }
 
+.line {
+    position: absolute;
+    top: 53px;
+    left: 22px;
+    width: 105px;
+    height: 3px;
+    background-color: rgb(2, 166, 70);
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
 .content_box {
     width: 100%;
     height: auto;
     /* padding: 5px; */
+}
+
+.content_box .content {
+    display: none;
+    animation: moving .5s ease;
+    width: 100%;
+    margin: 0;
+}
+
+.content_box .content.active {
+    display: block;
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+/* .content .item:hover {
+    box-shadow: 0 0 18px 0 rgba(35, 35, 35, .3);
+    scale: 1.01;
+}
+
+.content .item img {
+    width: 100%;
+    margin: auto;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.content .item span {
+    font-size: 12px;
+    color: var(--title-color);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    margin: .2rem auto;
+}
+
+.content .item .hoverable {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.content .item .hoverable li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: .25em;
+    margin: .25em;
+    border-radius: 50%;
+    line-height: 1;
+    background-color: var(--bg-color);
+    opacity: .5;
+    transition: background-color .3s, color .3s, opacity .3s;
+}
+
+.content .item:hover .hoverable li a {
+    opacity: 1;
+}
+
+.content .item .hoverable li a:hover {
+    color: var(--bg-color);
+    background-color: #0a021c;
+}
+
+.content .item .hoverable li.active a:hover {
+    background-color: var(--primary-clr);
+}
+
+.content .item .hoverable li:not(.active) {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform .3s, opacity .2s;
+}
+
+.content .item:hover .hoverable li {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.content .item .hoverable li:last-child {
+    transition-delay: .1s;
+} */
+
+.skillsContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .7em;
+    gap: 10px;
 }
 
 .skill {
@@ -392,10 +519,21 @@ h2 span {
     justify-content: center;
     text-align: center;
     padding: 10px;
-    font-size: var(--font-small);
     border: none;
     outline: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: .5em;
+}
+
+.canv {
+    height: 95px;
+}
+
+.canv p {
+    margin-top: 25%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .html {
@@ -416,12 +554,25 @@ h2 span {
 
 .figma {
     /* color: linear-gradient(135deg, #2BC3FF, #0072C6); */
-    background: linear-gradient(to bottom right, #FF7262, #FFD45F, #4CD7D0, #1ABC9C);
+    background-image: linear-gradient(to bottom right, #FF7262, #FFD45F, #4CD7D0, #1ABC9C);
     border: none;
     outline: none;
 }
 
 .skill i {
+    font-size: var(--big-font);
+}
+
+.skill p {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--font-small);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.canva {
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-weight: 600;
     font-size: var(--big-font);
 }
 
@@ -913,6 +1064,9 @@ hr {
 }
 
 @media (min-width: 768px) {
+    .heading h2 {
+        font-size: var(--h1-font-size);
+    }
     .Home {
         width: 80%;
         margin: auto;
@@ -940,11 +1094,19 @@ hr {
     .home-text h2 {
         font-size: var(--h1-font-size);
     }
+    .home-text p,
+    .details p,
+    .iono {
+        font-size: var(--h2-font-size);
+    }
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         column-gap: 2rem;
         margin-top: 1rem;
+    }
+    .tab-box .tab_btn {
+        font-size: var(--medium-font);
     }
     .projects__content {
         width: 500px;
@@ -1024,6 +1186,9 @@ hr {
     }
     .dark-theme .bg-header {
         box-shadow: 0 6px 24px hsla(207, 24%, 8%, .6);
+    }
+    .tab-box .tab_btn {
+        font-size: var(--font-medium);
     }
 }
 
