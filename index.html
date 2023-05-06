@@ -16,6 +16,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
     <title>TubiOb | Portfolio</title>
 </head>
@@ -39,14 +40,14 @@
                     </li>
                     <li class="nav__item">
                         <a href="#Skills" class="nav__link">
-                            <i class="ri-trophy-line"></i> Skills
+                            <i class="ri-trophy-line"></i> Skills & Portfolio
                         </a>
                     </li>
-                    <li class="nav__item">
+                    <!-- <li class="nav__item">
                         <a href="#Portfolio" class="nav__link">
                             <i class="ri-image-line"></i> Portfolio
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav__item">
                         <a href="#Contact" class="nav__link">
                             <i class="ri-chat-3-line"></i> Contact
@@ -163,30 +164,55 @@
 
 
                 <div class="content" data-tab="projects">
-                    <p class="iono">With my expertise in HTML, CSS, Javascript, I have successfully designed and developed several websites for both individual and group projects. My skills in these programming languages have allowed me to create intuitive and visually
-                        appealing websites that not only meet but exceed client expectations.</p>
+                    <!-- <p class="iono">With my expertise in HTML, CSS, Javascript, I have successfully designed and developed several websites for both individual and group projects. My skills in these programming languages have allowed me to create intuitive and visually
+                        appealing websites that not only meet but exceed client expectations.</p> -->
+                    <!-- <div class="skillsContainer"> -->
+
+
                     <div class="mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide item">
-                                <img src="" alt="">
-                                <div class="hoverable">
-
+                                <img src="./img/Screenshot (123).png" alt="Agrolpsum-Farms" class="projects__img">
+                                <div class="card-body">
+                                    <h3 class="projects__title">Agro-Economic Website</h3>
+                                    <p class="project-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolorem exercitationem provident ducimus, reiciendis at.</p>
+                                    <a href="https://agrolpsum.netlify.app/" class="projects__button button button__small" target="_blank">
+                                        <i class="ri-link"></i>
+                                    </a>
                                 </div>
-                                <span class="title"></span>
+                            </div>
+
+                            <div class="swiper-slide item">
+                                <img src="./img/Agrolpsum.png" alt="Agrolpsum-Farms" class="projects__img">
+                                <div class="card-body">
+                                    <h3 class="projects__title">Agro-Economic Website</h3>
+                                    <p class="project-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi illum at id voluptatum iste eligendi.</p>
+                                    <a href="https://agrolpsum.netlify.app/" class="projects__button button button__small" target="_blank">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide item">
+                                <img src="./img/Agrolpsum.png" alt="Agrolpsum-Farms" class="projects__img">
+                                <div class="card-body">
+                                    <h3 class="projects__title">Agro-Economic Website</h3>
+                                    <p class="project-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perferendis eligendi error, quaerat porro modi!</p>
+                                    <a href="https://agrolpsum.netlify.app/" class="projects__button button button__small" target="_blank">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="content">
-
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
     </section>
 
 
-    <section class="Portfolio" id="Portfolio">
+    <!-- <section class="Portfolio" id="Portfolio">
         <div class="heading">
             <h2>Portfolio</h2>
             <span>My Recent Works</span>
@@ -284,7 +310,7 @@
                 </div>
             </article>
         </div>
-    </section>
+    </section> -->
 
 
     <section class="Contact section" id="Contact">
@@ -360,12 +386,12 @@
                 </li>
 
                 <li>
-                    <a href="#Skills" class="footer__link">Skills</a>
+                    <a href="#Skills" class="footer__link">Skills & Portfolio</a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="#Portfolio" class="footer__link">Portfolio</a>
-                </li>
+                </li> -->
             </ul>
 
             <ul class="footer__social">
@@ -390,6 +416,9 @@
         <i class="ri-rocket-2-line"></i>
     </a>
 
+
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- SCROLL REVEAL -->
     <script src="./js/scrollreveal.min.js"></script>
     <!-- EMAIL JS -->
